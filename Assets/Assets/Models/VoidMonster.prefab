@@ -100,13 +100,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2790719921272611203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5efccec1838c3d84baa6d4514f7fbd63, type: 3}
+  m_Script: {fileID: 11500000, guid: a09f022ee5678be4e9bb740f8ef0673a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   gameManager: {fileID: 0}
-  enemyDeath: {fileID: 8300000, guid: 967fe363653e7524c93600c6ca4d3457, type: 3}
-  explosionParticle: {fileID: 19821056, guid: 85b6dbebd1e7a734186206bbcf61c18e, type: 3}
+  enemyDeath: {fileID: 0}
+  explosionParticle: {fileID: 0}
 --- !u!65 &1490308077333434424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115,9 +115,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2790719921272611203}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 3.0304627, y: 7.2586884, z: 3.9382792}
   m_Center: {x: -0.15658665, y: -0.25219464, z: -0.029686451}
 --- !u!114 &5909487842077541545
@@ -129,10 +137,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2790719921272611203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8532fd5faa6c3b44f990ef6fc3328cbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 279f532f382af2348b2b1699eae88053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 7632798029872650680, guid: f14d7c498e4fa204287a861a4a0f9f89, type: 3}
+  tower: {fileID: 0}
 --- !u!54 &1031586920708060212
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,10 +148,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2790719921272611203}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -250,6 +269,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 5604429337079709710}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 22c6575f4060ace4d8782e81c6c98892,
@@ -328,6 +348,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 095c7004ce151f5448b2bb8c76c69456, type: 2}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 22c6575f4060ace4d8782e81c6c98892,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2342093529148939075}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 22c6575f4060ace4d8782e81c6c98892,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6727005536606518674}
   m_SourcePrefab: {fileID: 100100000, guid: 22c6575f4060ace4d8782e81c6c98892, type: 3}
 --- !u!4 &2813185002533319215 stripped
 Transform:
@@ -343,7 +374,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &6727005536606518674
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -360,4 +391,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
